@@ -1,0 +1,25 @@
+# build commands
+
+# for FrontEnd
+docker build --target frontend -t frontend-image:v1 .
+
+# for backend
+docker build --target backend -t backend-image:v1 .
+
+# for mysql
+docker build --target mysql -t mysql-image:v1 .
+
+# run container commands
+
+#commands to create frontend containers 
+
+'docker container run -d --name frontend -p 5000:5000 --network host frontend:v1'
+
+#commands to create mysql containers 
+
+'docker container run -d --name mysql --network host -e MYSQL_ROOT_PASSWORD=root mysql:v1'
+
+#commands to create backend containers 
+
+'docker container run -d --name backend --network host backend:v1'
+
