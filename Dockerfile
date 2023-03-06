@@ -21,5 +21,6 @@ CMD ["npm", "start"]
 # MySQL stage
 
 FROM mysql AS mysql
+ENV MYSQL_DATABASE empoyees_db
 COPY mysql/. /docker-entrypoint-initdb.d/
 
