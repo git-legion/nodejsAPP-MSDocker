@@ -13,13 +13,13 @@ docker build --target mysql -t mysql-image:v1 .
 
 #commands to create frontend containers 
 
-'docker container run -d --name frontend -p 5000:5000 --network host frontend:v1'
+'docker container run -d --name frontend -p 5000:5000 --network host frontend-image:v1'
 
 #commands to create mysql containers 
 
-'docker container run -d --name mysql --network host -e MYSQL_ROOT_PASSWORD=root mysql:v1'
+'docker container run -d --name mysql --network host -e MYSQL_ROOT_PASSWORD=root mysql-image:v1'
 
 #commands to create backend containers 
 
-'docker container run -d --name backend --network host backend:v1'
+'docker container run -d --name backend --network host backend-image:v1'
 
