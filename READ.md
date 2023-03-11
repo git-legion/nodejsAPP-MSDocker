@@ -1,4 +1,4 @@
-## Time : 5 days (From Project 1-6)
+## Time : 5 days (From Project 1-6)1
 
 # node-application
 This is a API and microservices based Demo node application which contains separate Frontend Backend and the database used is mysql. 
